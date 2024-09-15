@@ -12,17 +12,20 @@ function pat_getmilkedbozo(sourceId, cfg)
 
   local liq = cfg.liquid
   if liq and liq.name then
-    local pos = object.position()
-    if liq.offset then
-      pos[1] = pos[1] + liq.offset[1]
-      pos[2] = pos[2] + liq.offset[2]
-    end
+    if not liq.spaces then liq.spaces = {{0, 0}} end
 
-    local prot = world.isTileProtected(pos)
-    local dungeon = world.dungeonId(pos)
+    local objPos = object.position()
+    local prot = world.isTileProtected(objPos)
+    local dungeon = world.dungeonId(objPos)
     if prot then world.setTileProtection(dungeon, false) end
 
-    world.spawnLiquid(pos, root.liquidId(liq.name), liq.amount or 1)
+    local id = root.liquidId(liq.name)
+    local amount = (liq.amount or 1) / #liq.spaces
+
+    for i = 1, #liq.spaces do
+      local pos = object.toAbsolutePosition(liq.spaces[i])
+      world.spawnLiquid(pos, id, amount)
+    end
 
     if prot then world.setTileProtection(dungeon, true) end
 
