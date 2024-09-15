@@ -11,22 +11,24 @@ function pat_getmilkedbozo(sourceId, cfg)
   storage.pat_milked = true
 
   local liq = cfg.liquid
-  if liq then
+  if liq and liq.name then
     local pos = object.position()
-    pos[1] = pos[1] + liq.offset[1]
-    pos[2] = pos[2] + liq.offset[2]
+    if liq.offset then
+      pos[1] = pos[1] + liq.offset[1]
+      pos[2] = pos[2] + liq.offset[2]
+    end
 
     local prot = world.isTileProtected(pos)
     local dungeon = world.dungeonId(pos)
     if prot then world.setTileProtection(dungeon, false) end
 
-    world.spawnLiquid(pos, root.liquidId(liq.name), liq.amount)
+    world.spawnLiquid(pos, root.liquidId(liq.name), liq.amount or 1)
 
     if prot then world.setTileProtection(dungeon, true) end
   end
 
   local radio = cfg.radioMessage
-  if radio then
+  if radio and radio.config then
     world.sendEntityMessage(sourceId, "queueRadioMessage", radio.config, radio.delay)
   end
 end
