@@ -30,7 +30,7 @@
     "messageParams": {
       "liquid": {
         "name": "milk",
-        "amount": 100,
+        "amount": 150,
         "offset": [ 3, 2 ]
       },
       "radioMessage": {
