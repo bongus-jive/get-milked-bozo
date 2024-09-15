@@ -25,6 +25,8 @@ function pat_getmilkedbozo(sourceId, cfg)
     world.spawnLiquid(pos, root.liquidId(liq.name), liq.amount or 1)
 
     if prot then world.setTileProtection(dungeon, true) end
+
+    world.npcQuery(object.position(), 50, {callScript = "npc.emote", callScriptArgs = {"laugh"}})
   end
 
   local radio = cfg.radioMessage
