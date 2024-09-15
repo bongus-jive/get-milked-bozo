@@ -7,9 +7,6 @@ function init()
 end
 
 function pat_getmilkedbozo(sourceId)
-  if storage.pat_milked then return end
-  storage.pat_milked = true
-
   world.containerOpen(entity.id())
 
   local cfg = config.getParameter("pat_getmilkedbozo", {})
