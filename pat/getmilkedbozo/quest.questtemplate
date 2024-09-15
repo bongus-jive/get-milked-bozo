@@ -1,0 +1,52 @@
+// quest for scripted interaction with container 
+// this is so fucking dumb
+{
+  "id": "pat_getmilkedbozo",
+  "title": "get milked bozo",
+  "text": ":3",
+
+  "showAcceptDialog": false,
+  "showCompleteDialog": false,
+  "showFailDialog": false,
+  "canBeAbandoned": false,
+  "showInLog": false,
+
+  "questGiverIndicator": "pat_getmilkedbozo", //  quests/quests.config:indicators.pat_getmilkedbozo
+  "questReceiverIndicator": "pat_getmilkedbozo",
+  "indicatorAnim": {
+    "frames": "/projectiles/invisibleprojectile/invisibleprojectile.png",
+    "color": "clear",
+    "animationCycle": 0
+  },
+
+  "rewards": [ ],
+  "moneyRange": [ 0, 0 ],
+
+  "updateDelta": 0,
+  "script": "/pat/getmilkedbozo/quest.lua",
+  "scriptConfig": {
+    "objectName": "protectoratelobbylockers2",
+    "message": "pat_getmilkedbozo",
+    "messageParams": {
+      "liquid": {
+        "name": "milk",
+        "amount": 100,
+        "offset": [ 3, 2 ]
+      },
+      "radioMessage": {
+        "config": {
+          "messageId": "pat_getmilkedbozo",
+          "unique": false,
+          "important": true,
+          "text": "get milked bozo",
+          "textSpeed": 20,
+          "senderName": "The Milker",
+          "portraitImage": "/pat/getmilkedbozo/portrait.png:<frame>",
+          "portraitFrames": 155,
+          "portraitSpeed": 2
+        },
+        "delay": 1
+      }
+    }
+  }
+}

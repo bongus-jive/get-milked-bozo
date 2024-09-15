@@ -1,0 +1,14 @@
+[
+  [
+    { "op": "test", "path": "/offeredQuests", "inverse": true },
+    { "op": "add", "path": "/offeredQuests", "value": [ ] }
+  ],
+  [
+    { "op": "test", "path": "/scripts", "inverse": true },
+    { "op": "add", "path": "/scripts", "value": [ ] }
+  ],
+  [
+    { "op": "add", "path": "/offeredQuests/-", "value": "pat_getmilkedbozo" },
+    { "op": "add", "path": "/scripts/-", "value": "/pat/getmilkedbozo/locker.lua" }
+  ]
+]
