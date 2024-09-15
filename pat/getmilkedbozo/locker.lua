@@ -10,6 +10,8 @@ function pat_getmilkedbozo(sourceId)
   if storage.pat_milked then return end
   storage.pat_milked = true
 
+  world.containerOpen(entity.id())
+
   local cfg = config.getParameter("pat_getmilkedbozo", {})
   local liq = cfg.liquid
   if liq and liq.name then
@@ -31,6 +33,8 @@ function pat_getmilkedbozo(sourceId)
     if prot then world.setTileProtection(dungeon, true) end
 
     world.npcQuery(object.position(), 50, {callScript = "npc.emote", callScriptArgs = {"laugh"}})
+
+    object.setOfferedQuests()
   end
 
   if sourceId and cfg.radioMessage then

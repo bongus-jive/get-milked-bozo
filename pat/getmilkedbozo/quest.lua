@@ -7,9 +7,5 @@ function init()
   
   if not locker then return end
 
-  if world.containerSize(locker) then
-    player.interact("OpenContainer", {}, locker)
-  end
-
   world.sendEntityMessage(locker, config.getParameter("message"), entity.id())
 end
