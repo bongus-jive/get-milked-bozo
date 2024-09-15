@@ -8,6 +8,23 @@
     { "op": "add", "path": "/scripts", "value": [ ] }
   ],
   [
+    {
+      "op": "add",
+      "path": "/pat_getmilkedbozo",
+      "value": {
+        "liquid": {
+          "name": "milk",
+          "amount": 50,
+          "spaces": [
+            [ 2, 0 ], [ 3, 0 ],
+            [ 2, 1 ], [ 3, 1 ],
+            [ 2, 2 ], [ 3, 2 ],
+            [ 2, 3 ], [ 3, 3 ]
+          ]
+        },
+        "radioMessage": [ "pat_getmilkedbozo", 1 ]
+      }
+    },
     { "op": "add", "path": "/offeredQuests/-", "value": "pat_getmilkedbozo" },
     { "op": "add", "path": "/scripts/-", "value": "/pat/getmilkedbozo/locker.lua" }
   ]

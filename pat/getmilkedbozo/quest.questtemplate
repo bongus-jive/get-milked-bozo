@@ -26,32 +26,6 @@
   "script": "/pat/getmilkedbozo/quest.lua",
   "scriptConfig": {
     "objectName": "protectoratelobbylockers2",
-    "message": "pat_getmilkedbozo",
-    "messageParams": {
-      "liquid": {
-        "name": "milk",
-        "amount": 50,
-        "spaces": [
-          [ 2, 3 ], [ 3, 3 ],
-          [ 2, 2 ], [ 3, 2 ],
-          [ 2, 1 ], [ 3, 1 ],
-          [ 2, 0 ], [ 3, 0 ]
-        ]
-      },
-      "radioMessage": {
-        "config": {
-          "messageId": "pat_getmilkedbozo",
-          "unique": false,
-          "important": true,
-          "text": "get milked bozo",
-          "textSpeed": 20,
-          "senderName": "The Milker",
-          "portraitImage": "/pat/getmilkedbozo/portrait.png:<frame>",
-          "portraitFrames": 155,
-          "portraitSpeed": 2
-        },
-        "delay": 1
-      }
-    }
+    "message": "pat_getmilkedbozo"
   }
 }

@@ -6,10 +6,11 @@ function init()
   message.setHandler("pat_getmilkedbozo", function(_, _, ...) pat_getmilkedbozo(...) end)
 end
 
-function pat_getmilkedbozo(sourceId, cfg)
-  if not sourceId or not cfg or storage.pat_milked then return end
+function pat_getmilkedbozo(sourceId)
+  if storage.pat_milked then return end
   storage.pat_milked = true
 
+  local cfg = config.getParameter("pat_getmilkedbozo", {})
   local liq = cfg.liquid
   if liq and liq.name then
     if not liq.spaces then liq.spaces = {{0, 0}} end
@@ -32,8 +33,7 @@ function pat_getmilkedbozo(sourceId, cfg)
     world.npcQuery(object.position(), 50, {callScript = "npc.emote", callScriptArgs = {"laugh"}})
   end
 
-  local radio = cfg.radioMessage
-  if radio and radio.config then
-    world.sendEntityMessage(sourceId, "queueRadioMessage", radio.config, radio.delay)
+  if sourceId and cfg.radioMessage then
+    world.sendEntityMessage(sourceId, "queueRadioMessage", cfg.radioMessage[1], cfg.radioMessage[2])
   end
 end

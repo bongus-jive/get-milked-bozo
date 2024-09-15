@@ -1,0 +1,13 @@
+{
+  "pat_getmilkedbozo": {
+    "messageId": "pat_getmilkedbozo",
+    "unique": false,
+    "important": true,
+    "text": "get milked bozo",
+    "textSpeed": 20,
+    "senderName": "The Milker",
+    "portraitImage": "/pat/getmilkedbozo/portrait.png:<frame>",
+    "portraitFrames": 155,
+    "portraitSpeed": 2
+  }
+}

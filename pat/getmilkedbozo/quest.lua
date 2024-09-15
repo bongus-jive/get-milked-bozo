@@ -11,5 +11,5 @@ function init()
     player.interact("OpenContainer", {}, locker)
   end
 
-  world.sendEntityMessage(locker, config.getParameter("message"), entity.id(), config.getParameter("messageParams"))
+  world.sendEntityMessage(locker, config.getParameter("message"), entity.id())
 end
