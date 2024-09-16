@@ -20,6 +20,7 @@ end
 
 function milk:trigger(sourceId)
   world.containerOpen(entity.id())
+  object.setOfferedQuests()
 
   local cfg = config.getParameter("pat_getmilkedbozo", {})
 
@@ -41,10 +42,10 @@ function milk:trigger(sourceId)
     end
 
     if prot then world.setTileProtection(dungeon, true) end
+  end
 
-    world.npcQuery(object.position(), 50, {callScript = "npc.emote", callScriptArgs = {"laugh"}})
-
-    object.setOfferedQuests()
+  if cfg.npcEmote then
+    world.npcQuery(object.position(), 50, {callScript = "npc.emote", callScriptArgs = {cfg.npcEmote}})
   end
 
   if sourceId and cfg.radioMessage then

@@ -20,6 +20,7 @@
             [ 2, 3 ], [ 3, 3 ]
           ]
         },
+        "npcEmote": "laugh",
         "radioMessage": [ "pat_getmilkedbozo", 1 ]
       }
     },
