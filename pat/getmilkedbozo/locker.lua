@@ -35,6 +35,7 @@ function pat_getmilkedbozo(sourceId)
   end
 
   if sourceId and cfg.radioMessage then
+    world.sendEntityMessage(sourceId, "interruptRadioMessage")
     world.sendEntityMessage(sourceId, "queueRadioMessage", cfg.radioMessage[1], cfg.radioMessage[2])
   end
 end
