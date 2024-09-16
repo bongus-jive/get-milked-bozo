@@ -1,9 +1,5 @@
 [
   [
-    { "op": "test", "path": "/offeredQuests", "inverse": true },
-    { "op": "add", "path": "/offeredQuests", "value": [ ] }
-  ],
-  [
     { "op": "test", "path": "/scripts", "inverse": true },
     { "op": "add", "path": "/scripts", "value": [ ] }
   ],
@@ -12,6 +8,8 @@
       "op": "add",
       "path": "/pat_getmilkedbozo",
       "value": {
+        "worldType": "protectorate",
+        "quests": [ "pat_getmilkedbozo" ],
         "liquid": {
           "name": "milk",
           "amount": 50,
@@ -25,7 +23,6 @@
         "radioMessage": [ "pat_getmilkedbozo", 1 ]
       }
     },
-    { "op": "add", "path": "/offeredQuests/-", "value": "pat_getmilkedbozo" },
     { "op": "add", "path": "/scripts/-", "value": "/pat/getmilkedbozo/locker.lua" }
   ]
 ]

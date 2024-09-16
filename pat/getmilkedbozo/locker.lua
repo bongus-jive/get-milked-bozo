@@ -1,15 +1,28 @@
-local _init = init
+local milk = {}
+pat_getmilkedbozo = milk
 
+local _init = init
 function init()
   if _init then _init() end
-  
-  message.setHandler("pat_getmilkedbozo", function(_, _, ...) pat_getmilkedbozo(...) end)
+  milk:init()
 end
 
-function pat_getmilkedbozo(sourceId)
+function milk:init()
+  local cfg = config.getParameter("pat_getmilkedbozo", {})
+  if cfg.worldType and cfg.worldType ~= world.type() then return end
+
+  object.setOfferedQuests(cfg.quests)
+
+  message.setHandler("pat_getmilkedbozo", function(_, _, ...)
+    self:trigger(...)
+  end)
+end
+
+function milk:trigger(sourceId)
   world.containerOpen(entity.id())
 
   local cfg = config.getParameter("pat_getmilkedbozo", {})
+
   local liq = cfg.liquid
   if liq and liq.name then
     if not liq.spaces then liq.spaces = {{0, 0}} end
