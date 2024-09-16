@@ -2,7 +2,9 @@
   "author" : "patman",
   "description" : "the milker",
   "friendlyName" : "Get milked bozo",
+  "link" : "steam://url/CommunityFilePage/3331968971",
   "name" : "pat_getmilkedbozo",
+  "steamContentId" : "3331968971",
   "steamDescription" : "Fills your protectorate locker with milk.\n\n[img]https://i.imgur.com/wXjYMqP.gif[/img]https://discord.gg/GdsQSgV\n[img]https://i.imgur.com/uyG8oTa.gif[/img]https://www.patreon.com/pathiccstar\n[img]https://i.imgur.com/xVfcRRH.gif[/img]https://ko-fi.com/patmanf\n[img]https://i.imgur.com/jJAj6jF.gif[/img]https://github.com/bongus-jive/get-milked-bozo",
   "steamTitle" : "Get milked bozo 🤪",
   "version" : "1.0"
