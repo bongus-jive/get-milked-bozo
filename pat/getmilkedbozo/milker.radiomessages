@@ -4,10 +4,10 @@
     "unique": false,
     "important": true,
     "text": "get milked bozo",
-    "textSpeed": 20,
+    "textSpeed": 9,
     "senderName": "The Milker",
     "portraitImage": "/pat/getmilkedbozo/portrait.png:<frame>",
     "portraitFrames": 155,
-    "portraitSpeed": 2
+    "portraitSpeed": 1.67
   }
 }
